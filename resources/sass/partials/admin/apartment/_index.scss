@@ -1,0 +1,258 @@
+.breadcumb {
+    @include flex(flex-start);
+
+    svg {
+        margin: 0 10px;
+    }
+}
+
+.main-index {
+    height: calc(100vh - 175px);
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0;
+
+    .user-left {
+        @include boxTest;
+        border-radius: 20px;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        a{
+            border-radius: 10px;
+            margin: 10px 0;
+            button{
+                border-radius: 10px;
+                padding: 10px 30px;
+                background: $mainColor;
+                color: white;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            @include boxTest;
+            padding: 10px;
+        }
+
+        h2,
+        p {
+            padding-top: 20px;
+        }
+
+        p {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .apartment-right {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 40px;
+        overflow-y: auto;
+
+        .box-apartment:not(:last-child) {
+            margin-bottom: 18px;
+        }
+
+        .box-apartment {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border-radius: 10px;
+            @include flex(space-between);
+            @include boxTest;
+
+            .box-left {
+                width: 60%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+
+                .box-ap-img {
+                    height: 100%;
+                    margin-right: 20px;
+
+                    img {
+                        height: 100%;
+                        width: 225px;
+                        border-radius: 10px;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .box-right {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                button{
+                    width: 100%;
+                    padding: 10px 30px;
+                    margin: 5px 0;
+                    border-radius: 10px;
+                    border: 1px solid $mainColor;
+                    cursor: pointer;
+                    font-size: larger;
+                }
+            }
+            .box-ap-stat-msg,
+            .box-ap-button,
+            .box-ap-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 0 10px;
+                p {
+                    color: grey;
+                }
+                strong {
+                    color: black;
+                }
+
+                .price_box {
+                    @include flex(space-between);
+
+                    p {
+                        width: 150px;
+                    }
+
+                    h3 {
+                        font-size: 25px;
+                    }
+                }
+            }
+
+            .box-ap-info {
+                width: 350px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .main-index{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+        .user-left {
+            padding: 10px;
+            @include boxTest;
+            border-radius: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .user_img {
+                @include boxTest;
+                @include flex(center);
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                padding: 10px;
+                overflow: hidden;
+                i {
+                    font-size: 130px;
+                    color: $mainGrey;
+                }
+            }
+            h2, p{
+                padding-top: 10px;
+            }
+            p {
+                display: flex;
+                justify-content: space-between;
+            }
+            a {
+                margin-top: 10px;
+                background: $mainColor;
+                color: white;
+                border: none;
+            }
+        }
+        .apartment-right {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+            padding-left: 0px;
+            .box-apartment:not(:last-child) {
+                margin-bottom: 18px;
+            }
+            .box-apartment {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                @include boxTest;
+                .box-left {
+                    width: 60%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .box-ap-img {
+                        width: 100%;
+                        margin-right: 20px;
+                        img {
+                            width: 100%;
+                            border-radius: 10px;
+                            object-fit: cover;
+                        }
+                    }
+                    .box-ap-info {
+                        width: 100%;
+                    }
+                }
+                .box-right {
+                    width: 100%;
+                    padding: 10px 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+                .box-ap-stat-msg,
+                .box-ap-button,
+                .box-ap-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding: 0 10px;
+                    p {
+                        color: grey;
+                    }
+                    strong {
+                        color: black;
+                    }
+                    button {
+                        background-color: white;
+                        border-radius: 10px;
+                        border: 1px solid black;
+                        font-size: 15px;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+                    .price_box {
+                        @include flex(space-between);
+                        p {
+                            width: 150px;
+                        }
+                        h3 {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

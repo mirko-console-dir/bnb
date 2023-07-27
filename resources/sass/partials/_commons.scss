@@ -1,0 +1,65 @@
+// @font-face {
+//     font-family: "AirBnB";
+//     src: url("/fonts/AirbnbCerealMedium.ttf") format("truetype");
+//     font-style: normal;
+//     font-weight: normal;
+// }
+
+body {
+    font-family: sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: lightgrey;
+}
+
+ul {
+    list-style-type: none;
+    li {
+        display: inline-block;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.main_container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.air_btn {
+    padding: 10px;
+    border-radius: 10px;
+    background: $mainColor;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+
+    a {
+        color: #fff;
+    }
+}
+
+p.views,
+p.rooms,
+.not_selected {
+    color: $mainGrey;
+}
+
+.hidden {
+    display: none;
+}

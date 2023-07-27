@@ -1,0 +1,190 @@
+.error{
+    background-color: #eea7a7;
+    border: 1px solid darkred;
+    border-radius: 10px;
+}
+
+.form_box_edit{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    button{
+        padding: 10px 30px;
+        background-color: $mainColor;
+        color: white;
+        border: none;
+        border-radius: 10px;
+    }
+    .images_left{
+        width: 25%;
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        img{
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    .info_right{
+        width: 75%;
+        padding: 20px;
+        section{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            border-bottom: 1px solid $mainColor;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 15px 10px;
+            div{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            label{
+                padding-right: 5px;
+                font-weight: bold;
+            }
+            input{
+                margin-right: 20px;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid grey;
+            }
+            .input_text{
+                width: 100%;
+                height: 100px;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid grey;
+            }
+            .service_box{
+                label{
+                    padding-left: 20px;
+                }
+                input{
+                    margin-left: 5px;
+                    transform: scale(1.5);
+                    &:checked{
+                        background-color: $mainColor;
+                    }
+                }
+            }
+        }
+        .row_input{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    .bottone_edit{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        button{
+            padding: 10px 30px;
+            margin-bottom: 10px;
+            background-color: $mainColor;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main_container{
+        max-width: 90%;
+    }
+    .form_box_edit{
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        button{
+            padding: 5px 15px;
+            background-color: $mainColor;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        .images_left{
+            width: 25%;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            img{
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        .info_right{
+            width: 75%;
+            padding: 20px;
+            section{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                border-bottom: 1px solid $mainColor;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                padding: 15px 10px;
+                div{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    padding: 5px 0;
+                }
+                label{
+                    padding-right: 5px;
+                    font-weight: bold;
+                }
+                input{
+                    margin-right: 20px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: 1px solid grey;
+                }
+                .input_text{
+                    width: 100%;
+                    height: 100px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: 1px solid grey;
+                }
+                .service_box{
+                    display: flex;
+                    flex-direction: row;
+                    padding-top: 5px;
+                    label{
+                        padding-left: 0px;
+                    }
+                    input{
+                        margin-left: 5px;
+                        transform: scale(1.5);
+                        &:checked{
+                            background-color: $mainColor;
+                        }
+                    }
+                }
+            }
+            .row_input{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

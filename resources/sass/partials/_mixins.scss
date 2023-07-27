@@ -1,0 +1,31 @@
+@mixin boxTest {
+    border: 1px solid $mainBlack;
+}
+
+@mixin flex($justify, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin smoothT($sec) {
+    transition: all #{$sec} linear;
+}
+
+@mixin mainBtn {
+    border: 1px solid $mainBlack;
+    border-radius: 10px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+@mixin bgImg($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+@mixin boxShadow {
+    box-shadow: -2px 5px 10px rgba(53, 50, 65, 0.15);
+}

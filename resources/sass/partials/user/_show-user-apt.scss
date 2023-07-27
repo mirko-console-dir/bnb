@@ -1,0 +1,187 @@
+.show_user_apt {
+    .back_btn {
+        @include flex(flex-start);
+        margin-bottom: 20px;
+
+        a {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    }
+
+    .main_info {
+        @include flex(space-between);
+        height: 480px;
+
+        .img_box {
+            width: 70%;
+            height: 100%;
+            overflow: hidden;
+            @include flex(flex-start);
+
+            .main_img {
+                max-width: 70%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    padding: 5px;
+                    object-fit: cover;
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                }
+            }
+
+            .apartment-images {
+                min-width: 30%;
+                height: 100%;
+
+                .second_img {
+                    img {
+                        border-top-right-radius: 20px;
+                    }
+                }
+
+                .third_img {
+                    img {
+                        border-bottom-right-radius: 20px;
+                    }
+                }
+
+                div {
+                    width: 100%;
+                    height: 50%;
+                    border-radius: 15px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+
+        .info_box {
+            width: 25%;
+            border-radius: 20px;
+            padding: 20px;
+            @include boxShadow;
+
+            h3 {
+                margin-top: 10px;
+            }
+
+            .hosts_box {
+                margin: 35px 0;
+                .box {
+                    @include flex(space-between);
+                    margin: 15px 0;
+
+                    .selector {
+                        @include flex(space-between);
+
+                        a {
+                            cursor: pointer;
+                        }
+
+                        p {
+                            margin: 0 15px;
+                        }
+                    }
+                }
+            }
+
+            .price_box {
+                @include flex(space-between);
+                margin: 10px 0;
+                color: lightslategrey;
+            }
+
+            .tot_price_box {
+                @include flex(space-between);
+                margin: 20px 0 30px;
+
+                p {
+                    color: lightslategrey;
+                }
+            }
+        }
+    }
+
+    .title_container {
+        @include flex(space-between);
+
+        .main_title {
+            margin: 30px 0;
+        }
+
+        .share_buttons {
+            @include flex(flex-start);
+
+            .share_box {
+                text-align: center;
+                border-radius: 10px;
+                padding: 10px;
+                font-weight: bold;
+                cursor: pointer;
+
+                &:hover {
+                    svg {
+                        color: $mainBlack;
+                    }
+                }
+
+                &.border {
+                    border: 1px solid $mainGrey;
+                    margin-left: 10px;
+                }
+
+                svg {
+                    font-size: 20px;
+                    color: $mainGrey;
+                    margin-bottom: 10px;
+                    @include smoothT(0.2s);
+                }
+            }
+        }
+    }
+
+    .details {
+        .detail_box {
+            margin: 30px 0;
+
+            h3 {
+                margin-bottom: 20px;
+            }
+
+            .services_container {
+                @include flex(flex-start);
+                flex-wrap: wrap;
+
+                .service_box {
+                    @include flex(flex-start);
+                    width: calc(100% / 4);
+                    margin-bottom: 40px;
+
+                    svg {
+                        margin-right: 20px;
+                        font-size: 25px;
+                        color: $mainBlack;
+                    }
+                }
+            }
+
+            .map_box {
+                width: 100%;
+                height: 500px;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                @include boxShadow;
+            }
+        }
+    }
+}

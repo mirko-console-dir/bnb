@@ -1,0 +1,97 @@
+.msg_container{
+    max-width: 80%;
+    margin: 0 auto;
+    img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .t_body{
+        border: 1px solid gray;
+        border-radius: 10px;
+        margin: 10px 0;
+        padding: 5px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        h4{
+            padding-bottom: 5px;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+        .msg-img{
+            width: 10%;
+            padding: 0 5px;
+        }
+        .msg-title{
+            width: 10%;
+            padding: 0 5px;
+        }
+        .msg-name{
+            width: 10%;
+            padding: 0 5px;
+        }
+        .msg-mail{
+            width: 20%;
+            padding: 0 5px;
+        }
+        .msg-txt{
+            width: 50%;
+            padding: 0 5px;
+        }
+        // .msg-bottone{
+        //     width: 5%;
+        //     padding: 0 5px;
+        // }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .msg_container{
+        max-width: 80%;
+        margin: 0 auto;
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .t_body{
+            border: 1px solid gray;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 5px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            h4{
+                padding-bottom: 5px;
+            }
+            div{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+            .msg-img{
+                width: 100%;
+                padding: 0 5px;
+            }
+            .msg-title{
+                width: 100%;
+                padding: 0 5px;
+            }
+            .msg-name{
+                width: 100%;
+                padding: 0 5px;
+            }
+            .msg-mail{
+                width: 100%;
+                padding: 0 5px;
+            }
+            .msg-txt{
+                width: 100%;
+                padding: 0 5px;
+            }
+        }
+    }
+}

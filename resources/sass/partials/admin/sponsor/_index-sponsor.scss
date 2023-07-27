@@ -1,0 +1,43 @@
+.main_container{
+    .box_ap_spons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid black;
+        img{
+            width: 30%;
+            margin: 20px 0;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px gray;
+        }
+    }
+    .container_sponsor{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .box_sponsor_type{
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            *{
+                padding: 5px 0;
+            }
+            a{
+                padding: 10px 20px;
+                border-radius: 10px;
+                background-color: $mainColor;
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+}

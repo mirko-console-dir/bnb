@@ -1,0 +1,56 @@
+.img_stat{
+    width: 400px;
+    height: 360px;
+    border-radius: 20px;
+}
+.stat-margin{
+    margin: 50px auto;
+}
+
+div.container-stat{
+    .app_stat{
+        color: black;
+        margin-bottom: 50px;
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    position: relative;
+    height: 600px;
+    border-radius: 20px;
+    border: 1px solid black;
+    @include flex(space-around, center);
+        #borderDemo {
+            @include flex(center, center);
+            background-color: #ececec;
+            position: absolute;
+            top: 5%;
+            left: 0%;
+            border: 8px inset rgba(28,110,164,0.08);
+            border-radius: 0px 120px 120px 0px;
+        }
+    
+    .canvas_3d{
+        width: 450px;
+        height: 380px;
+    }
+
+    .circle-tot{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: $mainColor;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        #eye{
+            font-size: px;
+        }
+
+
+    }
+}

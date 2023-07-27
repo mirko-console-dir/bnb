@@ -1,0 +1,62 @@
+.login_box {
+    @include flex(center, flex-start);
+    height: calc(100vh - 150px);
+
+    .auth_content {
+        margin-top: 50px;
+        border-radius: 15px;
+        padding: 20px 50px;
+        @include boxTest;
+
+        h2 {
+            color: $mainColor;
+            margin-bottom: 30px;
+        }
+
+        .auth_box {
+            .row {
+                @include flex(flex-start, flex-start);
+                flex-direction: column;
+                margin-bottom: 10px;
+                font-family: sans-serif;
+
+                label {
+                    margin-bottom: 10px;
+                }
+
+                .form-control {
+                    width: 300px;
+                    padding: 2px 4px;
+                    border-radius: 5px;
+                    border: 1px solid $mainBlack;
+                    outline: none;
+                }
+
+                .form-area {
+                    width: 550px;
+                }
+
+                .forgot {
+                    color: $mainGrey;
+                    transition: all 0.2s linear;
+
+                    &:hover {
+                        color: $mainBlack;
+                    }
+                }
+            }
+
+            button {
+                float: right;
+                background: $mainColor;
+                padding: 10px 20px;
+                border-radius: 10px;
+                font-size: 15px;
+                font-weight: bold;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

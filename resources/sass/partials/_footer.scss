@@ -1,0 +1,42 @@
+footer {
+    margin-bottom: 20px;
+    .footer_line {
+        margin-bottom: 10px;
+    }
+
+    .footer_links {
+        @include flex(space-between);
+
+        .site_link {
+            ul {
+                li {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .social_link {
+            @include flex(space-between);
+
+            .underline_text {
+                margin-right: 20px;
+
+                a {
+                    text-decoration: underline;
+                    font-weight: bold;
+                    margin-right: 10px;
+                }
+            }
+
+            .social {
+                a {
+                    margin-right: 20px;
+
+                    i {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

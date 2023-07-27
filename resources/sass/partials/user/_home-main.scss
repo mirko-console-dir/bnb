@@ -1,0 +1,363 @@
+.jumbotron {
+    height: 100vh;
+    @include bgImg("../storage/main_images/home_bg2.jpg");
+    position: relative;
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        @include flex(flex-start);
+        background: rgba(53, 50, 65, 0.5);
+        color: #fff;
+
+        .jumb_text {
+            margin-left: 160px;
+
+            h1 {
+                font-size: 150px;
+            }
+
+            h2 {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+.sponsored_apts {
+    padding-top: 60px;
+
+    .title {
+        @include flex(space-between);
+        margin-bottom: 50px;
+
+        h2 {
+            color: $mainColor;
+            font-size: 30px;
+        }
+
+        .btn {
+            @include mainBtn;
+        }
+    }
+
+    .template-img {
+        // overflow-x: hidden;
+        // width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        // flex-wrap: wrap;
+        // border: 1px solid black;
+
+        .img-array {
+            overflow: hidden;
+            display: flex;
+            width: 100%;
+            max-width: 80%;
+            margin: 0 auto;
+            flex-shrink: 0;
+            position: relative;
+            left: 0px;
+
+            .invisibile {
+                position: relative;
+                left: 0;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                transition: 300ms ease all;
+                display: flex;
+
+                .container-img {
+                    width: 320px;
+                    height: 600px;
+                    border-radius: 20px;
+                    position: relative;
+                    margin-right: 21px;
+                    background-size: cover;
+                    background-position: 0 0;
+                    background-repeat: no-repeat;
+                    overflow: hidden;
+
+                    .willoby {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        @include flex(flex-start);
+                        border-radius: 20px;
+                        background: linear-gradient(
+                            0deg,
+                            #212121b0 0%,
+                            rgba(139, 139, 139, 0.1) 100%
+                        );
+                        color: #fff;
+
+                        .like_box {
+                            width: 70px;
+                            height: 40px;
+                            position: absolute;
+                            top: 20px;
+                            @include flex(center);
+                            background: rgba(255, 255, 255, 0.1);
+                            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                            backdrop-filter: blur(4.5px);
+                            -webkit-backdrop-filter: blur(4.5px);
+                            border: 1px solid rgba(255, 255, 255, 0.18);
+                            border-radius: 0px 5px 5px 0;
+                            @include smoothT(0.2s);
+                            cursor: pointer;
+
+                            &:hover {
+                                svg.heart {
+                                    @include smoothT(0.2s);
+
+                                    #Tracciato_24 {
+                                        fill: $mainColor;
+                                        stroke: $mainColor;
+                                    }
+                                }
+                            }
+
+                            svg.heart {
+                                transform: scale(150%);
+                            }
+                        }
+
+                        .apt_text {
+                            width: 95%;
+                            position: absolute;
+                            bottom: 20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            padding: 10px;
+                            color: #fff;
+                            text-shadow: 1px 1px $mainBlack;
+
+                            .apt_title {
+                                font-size: 20px;
+                                font-weight: bold;
+                            }
+
+                            .price_box {
+                                @include flex(space-between);
+                                margin-top: 20px;
+
+                                p {
+                                    width: 50%;
+                                    font-weight: lighter;
+                                    font-size: 12px;
+                                    color: rgba(128, 128, 128, 1);
+                                }
+
+                                h3 {
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .apts {
+            @include flex(space-between);
+        }
+    }
+
+    .apt_end {
+        @include flex(space-between);
+        margin-top: 40px;
+        padding-bottom: 30px;
+
+        .arrows {
+            .forward {
+                transform: rotate(180deg);
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+.cities {
+    padding-top: 60px;
+
+    .title {
+        @include flex(space-between);
+        margin-bottom: 50px;
+
+        h2 {
+            color: $mainColor;
+            font-size: 30px;
+        }
+
+        .btn {
+            @include mainBtn;
+        }
+    }
+
+    .cities_box {
+        @include flex(flex-start);
+
+        .box {
+            width: calc(100% / 4 - 20px);
+            height: 640px;
+            border-radius: 20px;
+            box-shadow: -2px 5px 10px rgba(53, 50, 65, 0.15);
+            position: relative;
+            cursor: pointer;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            &.rome {
+                background-image: url("https://images.unsplash.com/photo-1529260830199-42c24126f198?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1510&q=80");
+                background-size: cover;
+                background-position: -530px 0;
+                background-repeat: no-repeat;
+            }
+
+            &.florence {
+                background-image: url("https://images.unsplash.com/photo-1527152272644-1af27a5c00cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80");
+                background-size: cover;
+                background-position: -40px 0;
+                background-repeat: no-repeat;
+            }
+
+            &.milan {
+                background-image: url("https://images.unsplash.com/photo-1530284610319-31ee7c55378e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80");
+                background-size: cover;
+                background-position: -40px 0;
+                background-repeat: no-repeat;
+            }
+
+            &.naples {
+                background-image: url("https://images.unsplash.com/photo-1564863974814-6a7bdc156046?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=752&q=80");
+                background-size: cover;
+                background-position: -40px 0;
+                background-repeat: no-repeat;
+            }
+
+            .cities_text {
+                transform: rotate(-90deg) translate(-45%, -105%);
+                transform-origin: top;
+                width: 640px;
+                color: #fff;
+                text-shadow: 1px 1px $mainBlack;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                h3 {
+                    font-size: 80px;
+                }
+
+                p {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    .end_cities {
+        @include flex(flex-end);
+        margin-top: 40px;
+
+        .arrows {
+            .forward {
+                transform: rotate(180deg);
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+.host_cta {
+    padding-top: 60px;
+    margin-bottom: 80px;
+
+    .cta_box {
+        width: 100%;
+        height: 450px;
+        @include bgImg("../storage/main_images/host-cta.jpg");
+        background-position: 0 -240px;
+        border-radius: 15px;
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                29deg,
+                rgba(26, 26, 26, 1) 0%,
+                rgba(139, 139, 139, 0.1) 100%
+            );
+            border-radius: 15px;
+            @include flex(flex-start, center);
+
+            .box_test {
+                // flex-direction: column;
+                color: #fff;
+                padding-left: 50px;
+
+                h2 {
+                    font-size: 80px;
+                }
+
+                p {
+                    font-size: 30px;
+                    width: 70%;
+                }
+
+                .btn {
+                    border: 1px solid rgba(255, 255, 255, 0.18);
+                    border-radius: 10px;
+                    padding: 10px 25px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    background: rgba(255, 255, 255, 0.1);
+                    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                    backdrop-filter: blur(4.5px);
+                    -webkit-backdrop-filter: blur(4.5px);
+                    width: 150px;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+// - RESPONSIVE 970PX
+@media screen and (max-width: 1200px) {
+    .sponsored_apts {
+        .title.main_container {
+            max-width: 80%;
+        }
+    }
+
+    .apt_end.main_container {
+        max-width: 80%;
+    }
+}
+
+// - RESPONSIVE 970PX
+@media screen and (max-width: 970px) {
+    .jumbotron {
+        height: 670px;
+        background-position: center;
+
+        .overlay {
+            .jumb_text {
+                margin-left: 100px;
+
+                h1 {
+                    font-size: 100px;
+                }
+
+                h2 {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+}
